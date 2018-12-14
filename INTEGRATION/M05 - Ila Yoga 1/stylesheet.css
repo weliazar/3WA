@@ -1,0 +1,115 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+	border:6px solid red;
+}
+
+header {
+	background-image:url('img/fond.jpg');
+	border: 3px dashed blue;
+	background-size:100%;
+	background-repeat:no-repeat;
+	height:450px;
+	background-position:bottom;
+}
+
+
+ nav p{
+		color:white;
+		text-align:center;
+		display:inline;
+}
+
+p a{ 
+		font-family: 'Kaushan Script', cursive;
+		width: 25%;
+
+		 }
+
+header i{
+
+}
+
+header p{
+	color:white;
+	font-family: 'Playfair Display', serif;
+}
+
+header h1 {
+	color:white;
+	font-family: 'Kaushan Script', cursive;
+}
+
+
+
+.partie1 {
+		background-color:white;
+		border: 5px dashed pink;
+}
+.image1 { 	
+			float:left;
+			background-size:cover;
+			width:20%;
+ }
+.image2{
+			float:right;
+			width:20%;
+			background-position:left top;
+}
+
+
+
+
+
+
+
+.partie2 {
+		background-image:url('img/background_section.jpg');
+
+		border: 5px dashed black;
+	
+}
+
+.partie2 article {
+	display:inline-block;
+	vertical-align:top;
+	width:33%;
+	text-align:center;
+}
+
+.partie2 img {
+				border-radius:50px;
+				width:90px;
+				height:90px;
+				background-size:contain;
+
+}
+
+.police2{
+
+	font-family: 'Playfair Display', serif;
+	color: grey;
+}
+
+
+
+
+
+
+.partie3 {
+		background-image:url('img/background_section.jpg');
+		border: 5px dashed orange;
+}
+iframe {
+	width:100%;
+}
+
+footer {
+
+	border:3px dashed purple;
+	background-image:url('img/background_section.jpg');
+}

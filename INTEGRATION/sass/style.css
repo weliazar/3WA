@@ -1,0 +1,85 @@
+/* line 3, /home/wabap28/sites/sass/style.scss */
+h1 {
+  color: red; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-3 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-3 > * {
+  width: 33.33333%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-4 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-4 > * {
+  width: 25%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-5 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-5 > * {
+  width: 20%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-6 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-6 > * {
+  width: 16.66667%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-7 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-7 > * {
+  width: 14.28571%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-8 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-8 > * {
+  width: 12.5%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-9 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-9 > * {
+  width: 11.11111%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-10 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-10 > * {
+  width: 10%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-11 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-11 > * {
+  width: 9.09091%; }
+
+/* line 9, /home/wabap28/sites/sass/style.scss */
+.grid-12 {
+  display: flex; }
+
+/* line 12, /home/wabap28/sites/sass/style.scss */
+.grid-12 > * {
+  width: 8.33333%; }
+
+/*# sourceMappingURL=style.css.map */

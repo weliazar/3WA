@@ -1,0 +1,24 @@
+.rectangle {
+    width: 400px;
+    height: 300px;
+    background-color: royalblue;
+    border-radius:5%;
+}
+
+#toogle-rectangle { 
+    
+}
+
+
+.important {
+    background-color: firebrick;
+}
+
+.good {
+    background-color: limegreen;
+}
+
+
+.hidden {
+    display: none;
+}

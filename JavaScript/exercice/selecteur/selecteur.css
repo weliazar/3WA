@@ -1,0 +1,79 @@
+li {
+    list-style: none;
+}
+
+#photoList {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#photoList li {
+    margin: 1em;
+    padding: 0.5em;
+ 
+}
+
+img:hover { 
+
+border: silver solid 10px;
+}
+
+.select{ 
+border:green solid 10px;
+}
+
+em {
+    color: red;
+}
+
+
+
+
+
+/* correction
+
+
+body
+{
+    margin: 0 auto;
+    width: 90%;
+}
+
+em
+{
+    color: red;
+    font-weight: bold;
+}
+
+
+.photo-list
+{
+    /* structure */
+    padding-left: 0;
+    width: 800px;
+
+    /* presentation */
+    list-style-type: none;
+}
+.photo-list li
+{
+    /* structure */
+    display: inline-block;
+    margin: 1em;
+    padding: 0.5em;
+
+    /* presentation */
+    border-radius: 8px;
+    transition: background-color 0.5s;
+}
+.photo-list li:hover
+{
+    background-color: silver;
+}
+.photo-list li.selected
+{
+    background-color: forestgreen;
+}
+
+

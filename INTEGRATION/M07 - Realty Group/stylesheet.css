@@ -1,0 +1,63 @@
+header >nav >ul>li {
+    display:inline-block;
+    margin: 3em;
+    
+}
+
+nav {
+    text-align: center;
+    position: relative;
+}
+
+
+div {
+
+
+}
+div > ul  {
+    
+    display:inline-block;
+
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+nav >ul>li>div {
+    background-color:#00BCD4;
+}
+
+
+.menu {
+    position: absolute;
+    width:100%;
+    left:0;
+    display: none;
+
+}
+nav>ul>li:hover>.menu {
+    display: block;
+}
+
+
+h2 {
+    color: #00BCD4;
+}
+a:hover>span {
+    display: block;
+    width:5%;
+    position:fixed
+
+}
+
+
+
+
+footer {  
+    background-color: #00BCD4;
+}

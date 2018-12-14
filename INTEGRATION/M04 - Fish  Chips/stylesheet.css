@@ -1,0 +1,86 @@
+
+*{
+	box-sizing:border-box;
+}
+body{
+	background-image:url(img/fond.png);
+	border: 10px solid red;
+	width:900p
+
+}
+header{
+	border:5px dashed black;
+	text-align: center;
+	background-color: #06B2B2;
+}
+
+a {border-left:5px ;
+}
+
+article{
+	border:4px dashed purple;
+}
+.recette{
+	border:3px solid blue;
+	width:60%;
+	float:left;
+	margin-right:5%;
+	font-family: 'Slabo 27px', serif;
+	background-color:#B3DDDB;
+}
+
+.fond2 {
+	border:3px solid black;
+	width:30%;
+	float:left;
+	background-color:#28B0B0;
+	font-family: 'Slabo 27px', serif;
+	font-size: 1.4em;
+	color:
+}
+.welcome {
+		text-align:center;
+margin:40px auto 40px auto;
+font-family: 'Slabo 27px', serif;
+}
+
+.couleur1{
+	background-color:#B3DDDB;
+	width: 40%;
+	text-align:center;
+	margin-left:25%;
+}
+
+.verti{
+
+	width:50%;
+	float:left;
+
+}
+.verti2{
+	width:50%;
+	float:right;
+}
+.ensemble {
+	width:800px;
+	text-align: center;
+	margin: 0 auto 0 auto;
+
+}
+
+.marge {
+	float:right;
+}
+img{
+
+	border-radius:50px;
+	width:90px;
+	height:90px;
+
+}
+p{
+	font-family: 'Slabo 27px', serif;
+}
+span{
+	color:#21999E;
+}

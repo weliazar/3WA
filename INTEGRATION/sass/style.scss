@@ -1,0 +1,16 @@
+$color1:red;
+
+h1 {
+    color:$color1;
+}
+
+@for $i from 3 through 12{
+	
+	.grid-#{$i} {
+	display:flex;
+	}
+	.grid-#{$i}>*{
+	width:100%/$i;
+	}
+
+}

@@ -1,0 +1,13 @@
+/* line 1, /home/wabap28/sites/M11 - Mindgeek/cloud/stylesheet.scss */
+article {
+  border: 1px dashed;
+  margin: 1.5em; }
+  /* line 5, /home/wabap28/sites/M11 - Mindgeek/cloud/stylesheet.scss */
+  article h2 {
+    background-color: #213e4e;
+    color: white; }
+  /* line 9, /home/wabap28/sites/M11 - Mindgeek/cloud/stylesheet.scss */
+  article button {
+    background-color: #FE899A; }
+
+/*# sourceMappingURL=stylesheet.css.map */

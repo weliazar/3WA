@@ -1,0 +1,42 @@
+body {
+    
+width: 960px;
+}
+
+header{
+    background-color: #F9F9F1;
+}
+.logo {
+    background-color: #C13922;
+    background-size: contain;
+    color: white;
+    width:100px;
+    text-align: center;
+
+} 
+
+.citation {
+    
+    text-align: right;
+}
+nav {
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    width: 20%;
+    background-color: #EBEAD7;
+    color: #C13922;
+}
+
+
+
+.partie1 {
+    background-image: url(images/people.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:100%;
+    padding: 70px;
+}
