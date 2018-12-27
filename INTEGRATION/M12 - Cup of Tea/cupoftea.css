@@ -1,0 +1,368 @@
+/* ---------------GLOBAL------------- */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+h1 {
+    font-size: 40px;
+    color: #A8BF6D;
+}
+
+h2 {
+    font-size: 25px;
+    color: #A8BF6D;
+    border-bottom: 1px solid #A8BF6D;
+    height: 0.6em;
+}
+
+h2 span {
+
+    background-color: white;
+    padding: 5px;
+
+}
+
+
+h3 {
+    font-size: 20px;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/*--------------RUBAN---------------------*/
+
+.ruban img {
+    width: 10%;
+    float: right;
+}
+
+
+/*--------------HEADER------------------*/
+
+
+header {
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+}
+
+.livraison {
+
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.logoPanier {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.panier {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    line-height: 3em;
+}
+
+.panier a i {
+
+    line-height: 1em;
+    font-size: 2rem;
+    border-radius: 100px;
+    border: 1px solid grey;
+    color: white;
+    line-height: 2em;
+    width: 60px;
+    height: 60px;
+}
+
+
+.navigationHaut {
+    display: flex;
+    justify-content: space-between;
+    line-height: 5em;
+    max-width: 1100px;
+    text-align: center;
+
+}
+
+.navigationHaut a {
+    color: white;
+}
+
+.navigationHaut a:hover {
+    background-color: lightgrey;
+    width: auto;
+    height: auto;
+}
+
+
+/*-----------OFFRE DE NOEL-------*/
+
+
+
+.offreNoel img {
+    width: 100%;
+}
+
+.offreNoel figure {
+    margin: 0;
+}
+
+
+/*---------------SLIDER-------------*/
+
+.slides img {
+    border: 1px solid #F2F2F2;
+}
+
+
+
+
+/*-------------CHOIX THE---------*/
+
+.nosThe {
+    background-color: white;
+    padding: 10px;
+}
+
+
+
+.choixThe {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.choixThe img {
+    width: 100%;
+    height: auto;
+}
+
+.choixThe:hover figure {
+    opacity: 0.5;
+}
+
+.choixThe figure:hover {
+    opacity: 1;
+}
+
+
+
+
+
+/*----------PRODUIT----------*/
+
+.produit {
+    display: flex;
+    background-color: white;
+}
+
+.produit article {
+    margin: 1em;
+}
+
+
+.produit img {
+    width: 100%;
+    height: auto;
+}
+
+.voirProduit {
+    background-color: #AE8E66;
+    padding: 1em;
+    color: white;
+}
+
+.prixProduit {
+    font-size: 24px;
+}
+
+
+/*---------FOOTER-----------------*/
+
+footer {
+    background-image: url(img/bg.jpg);
+    text-align: center;
+}
+
+
+.navigationBas {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #879C29;
+}
+
+.navigationBas a {
+    margin: 0 auto;
+    color: white;
+    line-height: 3em;
+}
+
+.navigationBas a i {
+    color: white;
+    display: block;
+    line-height: 2em;
+}
+
+.presentation {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+
+}
+
+.presentation ul li a {
+    color: white;
+
+}
+
+
+.license {
+    background-color: #879C29;
+    color: white padding: 10px;
+}
+
+.license p {
+
+    color: white;
+
+}
+
+.license img {
+    width: 5%;
+}
+
+
+
+
+
+@media screen and (min-width:480px) and (max-width:960px) {
+
+
+    .container {
+        margin: 0 auto;
+    }
+
+
+    .choixThe {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .choixThe img {
+        width: 50%
+    }
+
+
+    .produit {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .produit img {
+        width: 45%;
+    }
+
+    .navigationBas a {
+        line-height: 1em;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    h1,
+    .offreNoel,
+    .flexslider,.ruban {
+        display: none;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .navigationHaut {
+        display: block;
+        line-height: 2em;
+    }
+
+    .navigationHaut a {
+
+        display: block;
+        line-height: 2em;
+    }
+
+    .panier {
+    display: none;
+    }
+
+
+
+    .choixThe {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .choixThe figure {
+        width: 20%;
+
+    }
+
+    .produit {
+        display: block;
+    }
+
+
+    .produit img {
+        width: 45%;
+    }
+
+
+
+    .navigationBas {
+
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1em;
+        width: 5;
+        font-size: 15px;
+    }
+
+    .presentation {
+        display: block;
+        
+    }
+
+    .presentation ul {
+       padding-left: 0;
+        
+    }
+
+
+
+
+}

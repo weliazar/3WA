@@ -1,0 +1,14 @@
+div {
+    width: 400px;
+    height: 400px;
+    background-color: darkturquoise;
+    overflow:auto
+}
+
+div>h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* title 3petits points quand on pass dessus voir le contenu */ 

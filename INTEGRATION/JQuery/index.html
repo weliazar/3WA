@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1>Test</h1>
+    <a href="#"  class="button"> OK</a>
+    <div class="content"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, dolorum.</div>
+    
+    <script src="jquery-3.3.1.min.js"></script>
+    
+    <script>
+        $(function() {
+          $(".content").css("background-color","green");
+          }); // change le fond
+        
+        
+        $(".button").click(function(){
+            
+            $(".content").css("background-color","red");
+        } ); // Change la couleur quand on clique
+        
+        
+        $(".content").html("Salut !"); // change le contenu
+        
+        $(".content").toggle(10000); // fait disparaitre
+        
+        
+        
+        
+        // ATTENTION SYNTHASE () ET {}
+    
+    </script>
+    
+</body>
+</html>

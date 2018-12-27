@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+
+    <h1> MA TODOLIST :) </h1>
+
+
+    <div>
+
+
+
+        <?php if(empty($tasks) == false): ?>
+        <!-- Formulaire listant toutes les tâches existantes avec possibilité de suppression. -->
+        <form class="standard-form" action="remove.php" method="POST">
+            <ul class="task-list">
+
+
+                <?php foreach($tasks as $index => $taskData): ?>
+
+                <li>
+                    <input id="task-<?= $index ?>" type="checkbox" name="indexes[]" value="<?= $index ?>">
+
+                    <label for="task-<?= $index ?>" class="<?= $taskData[3] ?> ">
+                        <?= $taskData[0] ?>
+
+                <?php if(date_create($taskData[2]) < $now): ?>
+                <strong>- en retard</strong>
+                        <?php endif ?>
+
+                    </label>
+                    <p>
+                        <?= $taskData[1] ?>
+                    </p>
+
+                </li>
+                <?php endforeach ?>
+
+
+
+                <li>
+                    <input type="submit" value="Supprimer" title="Supprimer les tâches sélectionnées">
+                </li>
+            </ul>
+
+        </form>
+
+        <hr>
+        <?php endif ?>
+
+
+
+
+    </div>
+
+
+
+    <section>
+
+        <h2> Nouvelle tache</h2>
+
+        <form action="todo.php" method="post">
+
+
+            <div class="titre">
+
+                <label for="title">Titre</label>
+                <input type="text" name="title">
+            </div>
+            <div class="description">
+
+                <label for="description">Description</label>
+                <input type="text" name="description" class="des">
+            </div>
+
+
+            <div class="date">
+                <label for="start">Date de fin:</label>
+
+                <input type="date" id="start" name="date" value="2018-12-27" min="2018-01-01" max="2018-12-31">
+
+            </div>
+            
+            <div class="priorite">
+
+    <li>
+        <label>Priorité :</label>
+           
+        <input id="priority-low" name="priority" type="radio" value="priority-low">          <label for="priority-low">Basse</label>
+        
+        
+        <input id="priority-normal" name="priority" type="radio" value="priority-normal">
+        <label for="priority-normal">Normale</label>
+            
+        <input id="priority-high" name="priority" type="radio" value="priority-high">
+        <label for="priority-high">Haute</label>
+        
+    </li>
+                
+
+            </div>
+            
+<li>
+                    <input type="submit" value="Ajouter" title="Ajouter une nouvelle tâche">
+                </li>
+
+
+
+        </form>
+
+
+
+
+
+    </section>
+</body>
+
+</html>

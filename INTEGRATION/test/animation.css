@@ -1,0 +1,47 @@
+div {
+    width: 300px;
+    margin: 0 auto;
+    background-color: darksalmon;
+    text-align: center;
+    line-height: 300px;
+    
+    /*
+    transform: rotate(45deg) translateX(10em) translateY(5em) scale(0.5) skewX(15deg);
+*/
+    
+}
+
+/* rotation*/
+
+.wil {
+   /* transition: background-color 10s;
+    transition: transform 0.5s;*/
+    transition: all 1s ease-in 1s;
+}
+
+.wil:hover{
+    border-radius: 1000px;
+    background-color: darkmagenta;
+    transform: rotate(360deg);
+    
+}
+
+
+
+
+
+/* effet de gauche a droite*/
+@keyframes wil {
+    0% {
+        transform: translateX(-20em);
+    }
+    80% {
+        transform: translateX(2em);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.wil{
+    animation: wil 2s;
+}

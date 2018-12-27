@@ -1,0 +1,195 @@
+body {
+    background-image: url(img/fond.png);
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+h2,
+h3 {
+    color: deeppink;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+}
+
+header > nav > a {
+    margin: 2em;
+    color: grey;
+    font-size: 1.5em;
+}
+
+
+header > nav > a:hover {
+    color: red;
+    transform: translateY(15px);
+}
+
+header .logo:hover {
+    color: red;
+}
+
+header .logo:hover {
+    transform: scale(1.2);
+}
+header .logo {
+    transition: all 1s;
+}
+
+
+
+
+
+header {
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+
+
+
+.slide h1 {
+    line-height: 6em;
+    color: white;
+}
+
+.slide a {
+    line-height: 10em;
+    color: white;
+}
+
+.slide p {
+    color: white;
+}
+
+header img {
+    width: 100px;
+}
+
+
+.slide {
+    background-image: url(img/bg_header.png);
+    background-size: cover;
+
+}
+
+
+
+
+.camenbert > div {
+    display: inline-block;
+    width: 33%;
+}
+
+
+
+
+
+.service > article {
+    display: inline-block;
+    width: 33%;
+}
+
+.service > article a {
+    display: inline-block;
+    width: 2em;
+    line-height: 2em;
+    font-size: 2rem;
+    border-radius: 100px;
+    border: 5px solid red;
+    background-color: transparent;
+    color: grey;
+}
+
+
+@keyframes {
+    0%{
+        transform: translateY(-2em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+section > aside > img {
+    width: 50%;
+}
+
+
+section aside h3 {
+    text-align: left;
+}
+
+
+.droite {
+    float: right;
+}
+
+.gauche {
+    float: left;
+}
+
+
+
+
+
+
+
+
+form > div {
+    display: inline-block;
+}
+
+.mail {
+    display: inline-block;
+    border: solid grey;
+    border-radius: 30px;
+    width: 33%;
+    background-image: url(img/bg_form_mail.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.prenom {
+    display: inline-block;
+    border: solid grey;
+    border-radius: 30px;
+    width: 33%;
+    background-image: url(img/bg_form_name.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.message {
+    display: inline-block;
+    border: solid grey;
+    border-radius: 30px;
+    width: 66%;
+    background-image: url(img/bg_form_message.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
