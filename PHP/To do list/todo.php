@@ -95,7 +95,7 @@ function onload() {
 $tasks = onload();
 var_dump($tasks);
 
-$now = date_create();//
+$now = date_create();
 
 /*
 foreach ($tasks as $key => $value) {
@@ -104,7 +104,6 @@ foreach ($tasks as $key => $value) {
 }
 
 */
-
 
 include 'todo.phtml'
 //http://php.net/manual/fr/function.fopen.php
