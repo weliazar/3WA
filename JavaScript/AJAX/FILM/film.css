@@ -1,0 +1,22 @@
+.liste {
+    width: 550px;
+    height: 550px;
+    border: black solid 1px;
+    border-radius: 5%;
+    margin: 2em;
+     line-height: 1.5em;
+}
+.details {
+    width: 750px;
+    height: 550px;
+    border: black solid 1px;
+    border-radius: 5%;
+    margin: 2em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.affichage {
+    display: flex;
+    margin: 2em;
+}
