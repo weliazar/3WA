@@ -8,7 +8,7 @@ function onClickSearchMovies(event) {
     /* empecher le bouton de rafraichir la page */
     var query = $('#maRecherche').val();
     console.log(query); 
-    /* variable qui va recuperer la recherche indiquée dans le html */
+    /* variable qui va recuperer la valeur indiquée dans le html */
     
  $.getJSON('https://api.themoviedb.org/3/search/movie?api_key=2ee2c5b569240ea2a2a879dd9c8a822c&query='+query, getResultMovies);
 /* 1- ajouter la var query dans l'url */

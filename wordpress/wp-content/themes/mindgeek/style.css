@@ -1,0 +1,279 @@
+/*
+Theme Name: Mindgeek
+Author: 3W Academy
+Author URI: https://3wa.fr/
+Description: Ce thème est mis à disposition pour l'usage personnel des étudiants.
+Version: 1.1
+License: 3W Academy
+License URI: https://3wa.fr/propriete-materiel-pedagogique
+*/
+
+body {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size:1em;
+  line-height:2em;
+  margin:0;
+}
+.clearfix:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width:80%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.left {
+     float:left;
+     margin-right: 15px;
+}
+.right {
+     float:right;
+     margin-left: 15px;
+}
+nav, h1, h2, h3 {
+    font-family: 'Candal', sans-serif;
+}
+h2, h2 a {
+  color:#002434;
+}
+h3 {
+  font-size:1.2em;
+  color:#FB8B9B;
+  text-align: center;
+}
+/* Styles de la navigation */
+nav {
+  font-size:1.25rem;
+}
+header {
+  display:flex;
+  align-items:center;
+  padding:2% 0;
+}
+header .logo {
+  width:19%;
+}
+header nav {
+  width:79%;
+}
+nav ul {
+  padding-left: 0;
+  margin:0;
+  list-style:none;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+nav li a {
+  display:block;
+  width:100%;
+  color:#002434;
+  text-align: center;
+}
+nav li.current_page_item a {
+  color:#FB8B9B;
+}
+nav a:hover {
+  color:#FB8B9B;
+}
+nav li a::before {
+  display:block;
+  font-family:FontAwesome;
+  font-size:2em;
+  color:#FB8B9B;
+  margin-bottom:10px;
+}
+nav a:hover::before {
+  color:#002434;
+}
+nav li.home a::before {
+  content:"\f015";
+}
+nav li.mutualise a::before {
+  content:"\f0c0";
+}
+nav li.dedie a::before {
+  content:"\f007";
+}
+nav li.faq a::before {
+  content:"\f02d";
+}
+nav li.contact a::before {
+  content:"\f0e0";
+}
+.slider {
+  background:black;
+  background-image:url('../../uploads/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  text-align:center;
+  padding:12% 2%;
+  font-family: 'Candal', sans-serif;
+  margin-bottom:0;
+}
+.slider h1 {
+  font-size:3em;
+  color:#FFF;
+}
+.slider p {
+  font-size:2em;
+  color:#FFF;
+}
+.search {
+  background-color: #FB8B9B;
+  color:#FFFFFF;
+  margin-bottom:50px;
+  padding:5px;
+}
+#searchform p {
+     margin:0;
+}
+#searchform input {
+  border:none;
+  outline:none;
+  font-size:1.5em;
+  width:79%;
+}
+#searchform input {
+     width:100%;
+     background-color: #FB8B9B;
+     color: white;
+     padding: 20px 100px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size: 1.5em;
+     border: 0;
+}
+#searchform input::placeholder {
+  text-transform:uppercase;
+}
+/* Styles de la section de contenu principale */
+main .content {
+  float:left;
+  width:74%;
+  margin-right:2%;
+}
+/* Styles de la barre latérale */
+aside {
+  float:right;
+  width:24%;
+}
+aside > ul {
+  list-style:none;
+  padding-left: 0;
+}
+main section {
+  margin-bottom:40px;
+}
+.page h2, .content h2 {
+  font-size:1.8em;
+  text-align: center;
+  border-top:1px dashed;
+  border-left:1px dashed;
+  border-right:1px dashed;
+  padding:20px 0;
+  margin:25px 0;
+}
+.flex {
+  display:flex;
+}
+.wrapper, .wrapper2, .wrapper3 {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding:10px;
+}
+.wrapper article, .wrapper2 article, .wrapper3 article {
+  flex-basis:32%;
+  padding:10px;
+  box-sizing:border-box;
+}
+.wrapper .fa, .wrapper .prix {
+  color:#FB8B9B;
+}
+.wrapper .prix, .wrapper2 .prix {
+  font-weight:bold;
+  font-size:1.2em;
+  text-align: center;
+}
+.wrapper article:first-child, .wrapper article:nth-child(2),
+.wrapper2 article:first-child, .wrapper2 article:nth-child(2),
+.wrapper3 article:first-child, .wrapper3 article:nth-child(2) {
+  margin-right:2%;
+}
+.wrapper .fa {
+  display:block;
+  text-align:center;
+}
+.wrapper2 {
+  border:1px dashed;
+}
+.wrapper2 h3 {
+  background-color:#213E4E;
+  color:#FFF;
+  margin:0 0 10px 0;
+  padding:15px 0;
+}
+.wrapper2 h3 span {
+  text-transform: uppercase;
+}
+.wrapper2 p {
+  text-align:center;
+}
+.wrapper2 ul {
+  padding-left:20%;
+  list-style-type: circle;
+}
+.wrapper2 .prix {
+  font-family: 'Candal', sans-serif;
+}
+.wrapper2 .btn-order {
+  display:block;
+  text-align: center;
+  background-color: #FB8B9B;
+  color:#FFFFFF;
+  font-weight: bold;
+  padding:8px 0;
+}
+.wrapper2:hover article {
+  opacity:0.7;
+}
+.wrapper2 article:hover {
+  opacity:1;
+}
+.wrapper3 {
+  text-align:center;
+}
+.wrapper3 h3 {
+  padding-bottom:10px;
+  border-bottom:1px dashed;
+}
+.wrapper3 h3 span {
+  display:none;
+}
+.contact h3 {
+  text-align:left;
+}
+.map {
+  width:100%;
+}
+#footer {
+  background-color:#213E4E;
+  color:#FFF;
+  text-align:center;
+  padding:2%;
+}
+#footer nav {
+  margin-bottom:40px;
+  font-size:1em;
+}
+#footer a {
+  color:#FFF;
+}

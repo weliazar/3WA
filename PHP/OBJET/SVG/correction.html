@@ -1,0 +1,293 @@
+<!----------index.php ------->
+
+<?php
+
+include 'classes/Shape.class.php';
+include 'classes/Rectangle.class.php';
+include 'classes/Carre.class.php';
+include 'classes/Circle.class.php';
+include 'classes/Ellipse.class.php';
+include 'classes/Program.class.php';
+
+
+$rectangle = new Rectangle('50', '20', '200', '100', 'firebrick', '1');
+$carre = new Carre('400', '200', '100', 'deepskyblue', '0.5');
+$circle = new Circle('300', '250', '180', 'gold', '0.33');
+$ellipse = new Ellipse('600', '250', '40', '80', 'blue', '0.75');
+$triangle = new Triangle('60 60', '200 250', '60 250', 'purple', '0.75');
+$prog = new Program($rectangle, $carre, $circle, $ellipse, $triangle);
+
+$results = $prog->drawAll();
+var_dump($results);
+
+include 'index.phtml';
+
+?>
+
+
+
+<!----------index.phtml ------->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+</head>
+<style>
+	svg {
+    	border: 1px solid red;
+
+    }
+</style>
+<body>
+    <h1>3WA Painter</h1>
+	<svg height="600px" width="800px">
+    	<?php foreach($results as $result):?>
+        	<?=$result?>
+        <?php endforeach ?>
+    </svg>
+</body>
+</html>
+
+
+<!----------classes/Program.class.php ------->
+
+
+<?php
+class Program {
+	private $rectangle;
+    private $carre;
+    private $circle;
+    private $ellipse;
+    private $triangle;
+
+
+    public function __construct(Rectangle $rectangle, Carre $carre, Circle $circle, Ellipse $ellipse, Triangle $triangle) {
+
+    	$this->rectangle = $rectangle;
+        $this->carre = $carre;
+        $this->circle = $circle;
+        $this->ellipse = $ellipse;
+        $this->triangle = $triangle;
+
+    }
+
+	public function drawRectangle() {
+		$size = $this->rectangle->getSize(); // ['width' =>200,'height' => 100];
+    	$position = $this->rectangle->getPosition();
+		$style = $this->rectangle->getStyle();
+
+    	return '<rect x="'.$position['x'].'" y="'.$position['y'].'" width="'.$size['width'].'" height="'.$size['height'].'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></rect>';
+    }
+
+	public function drawCarre() {
+    	$size = $this->carre->getSize();
+		$position = $this->carre->getPosition();
+		$style = $this->carre->getStyle();
+
+
+		return '<rect x="'.$position['x'].'" y="'.$position['y'].'" width="'.$size['width'].'" height="'.$size['height'].'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></rect>';
+    }
+
+    public function drawCircle() {
+
+		$size = $this->circle->getSize();
+		$position = $this->circle->getPosition();
+		$style = $this->circle->getStyle();
+
+		return '<circle cx="'.$position['x'].'" cy="'.$position['y'].'" r="'.$size.'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></circle>';
+	}
+
+	public function drawEllipse() {
+    	$rx = $this->ellipse->getSize();
+		$ry = $this->ellipse->getEllipseSize();
+		$position = $this->ellipse->getPosition();
+		$style = $this->ellipse->getStyle();
+
+    	return '<ellipse cx="'.$position['x'].'" cy="'.$position['y'].'" rx="'.$rx.'" ry="'.$ry.'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></ellipse>';
+
+   }
+
+   public function drawTriangle() {
+   		$points = $this->triangle->getPosition();
+		$style = $this->triangle->getStyle();
+
+        return '<polygon points="'.$points[0].', '.$points[1].', '.$points[2].'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></polygon>';
+
+   }
+
+   public function drawAll() {
+   	  $result = [];
+      array_push( $result, $this->drawRectangle() );
+	  array_push( $result, $this->drawCarre() );
+	  array_push( $result, $this->drawCircle() );
+	  array_push( $result, $this->drawTriangle() );
+      array_push( $result, $this->drawEllipse() );
+
+      return $result;
+   }
+
+
+}
+
+?>
+
+<!----------classes/Shape.class.php ------->
+
+<?php
+
+abstract class Shape {
+
+	private $x;
+    private $y;
+    private $fill;
+    private $opacity;
+
+
+     public function __construct($x, $y, $fill, $opacity)
+	{
+    	$this->x = $x;
+		$this->y = $y;
+        $this->fill = $fill;
+		$this->opacity = $opacity;
+    }
+
+    public function getPosition() {
+		return [
+			'x'=> $this->x,
+			'y' => $this->y
+		];
+	}
+
+	public function getStyle() {
+		return [
+			'fill'=> $this->fill,
+			'opacity' => $this->opacity
+		];
+	}
+
+
+}
+
+?>
+
+
+
+<!----------classes/Rectangle.class.php ------->
+
+
+<?php
+class Rectangle extends Shape {
+
+	private $width;
+	private $height;
+
+
+    public function __construct($x, $y, $width, $height, $fill, $opacity)
+	{
+    	parent::__construct($x, $y, $fill, $opacity);
+   	    $this->width = $width;
+		$this->height = $height ;
+
+	}
+
+
+	public function getSize() {
+
+		return [
+			'width' => $this->width,
+			'height' => $this->height
+		];
+	}
+
+
+
+}
+
+?>
+
+<!----------classes/Carre.class.php ------->
+<?php
+class Carre extends Rectangle {
+
+    public function __construct($x, $y, $width, $fill, $opacity)
+	{
+        parent::__construct($x, $y, $width, $width, $fill, $opacity);
+
+	}
+
+
+}
+
+?>
+
+
+<!----------classes/Circle.class.php ------->
+
+<?php
+class Circle extends Shape {
+	private $r;
+
+	public function __construct($x, $y, $r, $fill, $opacity)
+	{
+        parent::__construct($x, $y, $fill, $opacity);
+
+		$this->r = $r;
+
+	}
+
+	public function getSize() {
+
+		return $this->r;
+
+	}
+
+}
+
+?>
+
+
+<!----------classes/Ellipse.class.php ------->
+
+<?php
+class Ellipse extends Circle {
+
+	private $ry;
+
+	public function __construct($x, $y, $rx, $ry, $fill, $opacity)
+	{
+		parent::__construct($x, $y, $rx, $fill, $opacity);
+		$this->ry = $ry;
+	}
+
+
+	public function getEllipseSize() {
+		return  $this->ry;
+	}
+
+
+}
+
+?>
+
+<!----------classes/Triangle.class.php ------->
+
+<?php
+class Triangle extends Shape{
+	private $points;
+
+    public function __construct($pos1, $pos2, $pos3 , $fill, $opacity)
+	{
+	        parent::__construct('', '', $fill, $opacity);
+	        $this->points = [ $pos1, $pos2, $pos3 ];
+	}
+
+    public function getPosition(){
+
+		return $this->points;
+	}
+
+
+}

@@ -1,0 +1,258 @@
+<!--------------address-book.html------------------->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/address-book.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+</head>
+<body>
+    <section>
+        <h1><i class="fa fa-book"></i> Carnet d'Adresses</h1>
+
+        <!-- Contenu du carnet d'adresses (liste de contacts) -->
+        <section id="address-book"></section>
+
+        <!-- Détails d'un contact particulier du carnet d'adresses -->
+        <aside id="contact-details" data-id="" class="hide">
+            <h3></h3>
+            <p></p>
+            <a href="#">Editer ce contact</a>
+        </aside>
+
+        <nav>
+            <ul class="menu">
+                <li><button id="add-contact" title="Ajouter un contact"><i class="fa fa-plus"></i></button></li>
+                <li><button id="clear-address-book" title="Effacer le carnet d'adresses"><i class="fa fa-trash-o"></i></button></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Le formulaire de saisie de contact ne s'affiche pas au démarrage -->
+    <form id="contact-form" class="hide standard-form" data-mode="add">
+        <hr>
+        <ul>
+            <li>
+                <label for="title">Civilité :</label>
+                <select id="title" name="title">
+                    <option value="Madame">Madame</option>
+                    <option value="Mademoiselle">Mademoiselle</option>
+                    <option value="Monsieur">Monsieur</option>
+                </select>
+            </li>
+            <li>
+                <label for="lastName">Nom :</label>
+                <input id="lastName" type="text" name="lastName">
+            </li>
+            <li>
+                <label for="firstName">Prénom :</label>
+                <input id="firstName" type="text" name="firstName">
+            </li>
+            <li>
+                <label for="phone">Téléphone :</label>
+                <input id="phone" type="text" name="phone" maxlength="10">
+            </li>
+            <li>
+                <input type="button" id="save-contact" value="Enregistrer">
+            </li>
+        </ul>
+    </form>
+
+     <script src="js/utilities.js"></script>
+    <script src="js/address-book.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+<!--------------js/utilities.js------------------->
+
+<script>
+
+function saveDataToDomStorage(key, value)
+{
+    var jsonData = JSON.stringify(value);
+
+    window.localStorage.setItem(name, jsonData);
+}
+
+
+function loadDataFromDomStorage(key)
+{
+	var jsonData = window.localStorage.getItem(key);
+
+    return JSON.parse(jsonData);
+
+}
+</script>
+
+<!--------------js/address-book.js------------------->
+<script>
+
+
+
+function createContact(title, firstName, lastName, phone)
+{
+	var contact           = {};
+    contact.title = title;
+    contact.firstName = firstName;
+    contact.lastName  = lastName.toUpperCase();
+    contact.phone     = phone;
+
+    return contact;
+
+}
+
+
+function load() {
+
+	var addressBook = loadDataFromDomStorage('contacts');
+
+    if(addressBook == null)
+    {
+    	addressBook = []
+    }
+
+    return addressBook;
+
+}
+
+
+function refreshAddressBook(addressBook)
+{
+	 $('#address-book').empty();
+
+     var addressBookList = $('<ul>');
+
+    for(var index = 0; index < addressBook.length; index++)
+    {
+    	var li = $('<li data-id="'+index+'">');
+        li.append(addressBook[index].firstName+' '+addressBook[index].lastName);
+
+        addressBookList.append(li);
+
+    }
+
+    $('#address-book').html(addressBookList);
+
+
+
+}
+
+
+</script>
+
+
+<!--------------js/event.js------------------->
+
+<script>
+
+var addressBook = load();
+
+refreshAddressBook(addressBook);
+
+function onClickAddContact()
+{
+	$('#contact-form').removeClass('hide');
+
+    $('#contact-form').data('mode', 'add');
+
+   // $('#contact-form').fadeIn('fast');  retire un display none avec un transition fondu au noir
+
+
+}
+
+
+function onClickSaveContact()
+{
+
+	var contact = createContact
+    (
+        $('select[name=title]').val(),
+        $('input[name=firstName]').val(),
+        $('input[name=lastName]').val(),
+        $('input[name=phone]').val()
+    );
+
+
+    if ($('#contact-form').data('mode') == 'add') {
+
+        addressBook.push(contact);
+
+    } else {
+    	var id = $('#contact-details').data('id');
+
+        addressBook[id] = contact;
+
+    }
+
+
+
+
+	saveDataToDomStorage('contacts', addressBook);
+
+    refreshAddressBook(addressBook);
+
+    $('#contact-details').addClass('hide');
+    $('#contact-form').addClass('hide');
+
+}
+
+function onClickShowContactDetails() {
+
+	var id = $(this).data('id');
+
+	$('#contact-details h3').text(addressBook[id].title+' '+addressBook[id].firstName+' '+addressBook[id].lastName);
+    $('#contact-details p').text(addressBook[id].phone);
+
+    $('#contact-details').removeClass('hide');
+    $('#contact-details').data('id', id);
+
+}
+
+function onClickEditContact() {
+
+	var id =  $('#contact-details').data('id');
+     $('#title').val(addressBook[id].title);
+    $('#firstName').val(addressBook[id].firstName);
+    $('#lastName').val(addressBook[id].lastName);
+    $('#phone').val(addressBook[id].phone);
+
+	$('#contact-form').data('mode', 'edit');
+    $('#contact-form').removeClass('hide');
+}
+
+function onClickClearAddressBook(event) {
+	event.preventDefault();
+
+    addressBook = [];
+    saveDataToDomStorage('contacts', []);
+    refreshAddressBook(addressBook);
+    $('#contact-details').addClass('hide');
+
+}
+
+
+</script>
+
+<!--------------js/main.js------------------->
+
+<script>
+
+$('#add-contact').on('click', onClickAddContact);
+$('#save-contact').on('click', onClickSaveContact);
+$(document).on('click',  '#address-book li', onClickShowContactDetails);
+$('#contact-details a').on('click', onClickEditContact);
+ $('#clear-address-book').on('click', onClickClearAddressBook);
+
+</script>

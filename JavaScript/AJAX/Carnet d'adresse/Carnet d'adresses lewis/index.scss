@@ -1,0 +1,87 @@
+/*************VARIABLES**************/
+$bgcColor : #F4ECD3;
+$colorTitle : #104259;
+$colorButton : #E0E0E0;
+$colorLabel : rgb(90, 189, 143);
+
+
+
+body *{
+    box-sizing: border-box;
+}
+body{
+    background-color: $bgcColor;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+h1{
+    color: $colorTitle;
+    i{
+        margin-right: 0.5em;
+        transform: rotate(-15deg);
+    }
+}
+nav{
+    margin: 2em 0;
+}
+a{
+    color: $colorLabel;
+    font-size: 1.5rem;
+    &:hover{
+        color: #FC7470;
+    }
+}
+#addContact,#deleteStorage,#save{
+    text-decoration: none;
+    background-color: $colorButton;
+    color: black;
+    border: 1px grey solid;
+    padding: 7px 7px;
+    margin-right: 0.5em;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.contactDetails{
+    h2{
+        font-size: 1.2rem;
+    }
+    p{
+        font-weight: normal;
+        font-size: 1rem;
+    }
+}
+.hidden{
+    display: none;
+}
+form{
+    border-top: 1px grey solid;
+    padding-top: 1em;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        li{
+            margin: 20px 0;
+            font-size: 1.2em;
+            #civilite{
+                width: 100px;
+            }
+            #save{
+                width: 100px;
+            }
+        }
+    }
+    label{
+        display: inline-block;
+        color: $colorLabel;
+        width: 120px;
+        text-align: right;
+        padding-right: 1em;
+    }
+    input,select{
+        display: inline-block;
+        width: 200px;
+    }
+}

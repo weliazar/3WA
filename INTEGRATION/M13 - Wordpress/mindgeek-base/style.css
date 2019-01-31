@@ -1,0 +1,21 @@
+/*
+Theme Name: Mindgeek
+Author: 3W Academy
+Author URI: https://3wa.fr/
+Description: Ce thème est mis à disposition pour l'usage personnel des étudiants.
+Version: 1.1
+License: 3W Academy
+License URI: https://3wa.fr/propriete-materiel-pedagogique
+*/
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:1em;
+  line-height:2em;
+  margin:0;
+}
+.container {
+  max-width:80%;
+  margin-left:auto;
+  margin-right:auto;
+}

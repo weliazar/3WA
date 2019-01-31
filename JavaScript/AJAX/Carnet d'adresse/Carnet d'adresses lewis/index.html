@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Carnet d'adresses</title>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-book"></i>Carnet d'Adresses</h1>
+        <ul class="showContacts">
+               
+        </ul>
+        <div class="contactDetails">
+
+        </div>
+        <nav>
+            <a href="#" id="addContact"><i class="fas fa-plus"></i></a>
+            <a href="#" id="deleteStorage"><i class="fas fa-trash-alt"></i></a>
+        </nav>
+        <form class="hidden" action="index.html" method="POST">
+            <ul>
+                <li>
+                    <label for="civilite">Civilité :</label>
+                    <select name="civilite" id="civilite">
+                        <option value="madame">Madame</option>
+                        <option value="mademoiselle">Mademoiselle</option>
+                        <option value="monsieur">Monsieur</option>
+                    </select>
+                </li>
+                <li>                
+                    <label for="name">Nom :</label>
+                    <input type="text" name="name" id="name">
+                </li>
+                <li>
+                    <label for="firstName">Prénom :</label>
+                    <input type="text" name="nafirstNameme" id="firstName">
+                </li>
+                <li>
+                    <label for="telephone">Téléphone :</label>
+                    <input type="text" name="telephone" id="telephone">
+                </li>
+                <li>                    
+                    <input type="submit" name="save" id="save" value="Enregistrer">
+                </li>
+            </ul>
+        </form>
+    </div>
+
+
+    <script src="js/utilities.js"></script>
+    <script src="js/address-book.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
