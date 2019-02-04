@@ -21,7 +21,7 @@
                 <article id="meal-details" class="meal-details no-left-label">
                     <img src="" alt="Photo du produit">
                     <p></p>
-                    <span>Prix : <strong></strong></span>
+                    <span>Prix : <strong> </strong> €</span>
                 </article>
             </li>
             <li>
@@ -29,7 +29,7 @@
                 <input id="quantity" class="quantity" type="text" maxlength="2" name="quantity" data-name="Quantité" data-type="positive-integer" data-required="">
             </li>
             <li>
-                <button class="button button-primary no-left-label" type="submit">Ajouter</button>
+                <button id="addButton" class="button button-primary no-left-label" type="submit">Ajouter</button>
             </li>
         </ul>
     </fieldset>
@@ -42,7 +42,7 @@
 
 <ul class="link-list">
     <li>
-        <a href="<?=$requestUrl?>/order/payment?id=3"></a><button class="button button-primary">Valider la commande</button>
+        <a href="<?=$requestUrl?>/order/validate"><button class="button button-primary">Valider la commande</button></a>
         <a class="button button-cancel small" href="<?=$requestUrl?>">Annuler</a>
     </li>
 </ul>
@@ -50,4 +50,6 @@
 
 <!-- Classes de gestion du formulaire de commande -->
 <!-- Ce code JavaScript n'est chargé QUE depuis l'URL /order/payment/success -->
-<script src="/resto/application/www/js/classes/OrderForm.class.js"></script></main>
+<script src="<?=$wwwUrl?>/js/classes/BasketSession.class.js"></script>
+<script src="<?=$wwwUrl?>/js/classes/OrderForm.class.js"></script>
+</main>

@@ -1,16 +1,13 @@
 <?php
 
-class MealController
+class ValidateController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
 
-      $mealModel = new MealModel();
-      $meals = $mealModel->mealElement($_GET['id']);
-
-
-      echo json_encode($meals);
-      exit();
+        if(array_key_exists('email', $_SESSION) == false) {
+            $http->redirectTo('/user/login');
+        }
 
 
 
@@ -20,8 +17,6 @@ class MealController
     {
 
     }
-
 }
-
 
 ?>

@@ -12,6 +12,16 @@ class MealModel {
   }
 
 
+  public function mealElement($id) {
+
+  $dataElement = new Database();
+  $element= $dataElement->queryOne('SELECT * FROM Meal WHERE Id=?
+  ', [$id]);
+
+  return $element;
+
+}
+
 
 }
 

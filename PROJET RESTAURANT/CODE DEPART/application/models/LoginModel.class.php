@@ -13,6 +13,10 @@ class LoginModel {
   		$_SESSION['email'] = $user['Email'];
   		$_SESSION['firstName'] = $user['FirtsName'];
   		$_SESSION['lastName'] = $user['LastName'];
+      $_SESSION['address'] = $user['Address'];
+      $_SESSION['zipCode'] = $user['ZipCode'];
+      $_SESSION['city'] = $user['City'];
+
       var_dump($_SESSION);
 
   			}

@@ -13,7 +13,7 @@ class RegisterModel {
 
   public function addUser($post)
 	{
-
+var_dump($post);
       $dataUser = new Database();
 
       $hashPassword = $this->hashPassword($post['password']);
