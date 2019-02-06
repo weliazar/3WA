@@ -9,13 +9,13 @@ class LoginModel {
   			var_dump($user);
 
   			if( $user != false && $this->verifyPassword($post['password'], $user['Password']) == true ) {
-
-  		$_SESSION['email'] = $user['Email'];
-  		$_SESSION['firstName'] = $user['FirtsName'];
-  		$_SESSION['lastName'] = $user['LastName'];
-      $_SESSION['address'] = $user['Address'];
-      $_SESSION['zipCode'] = $user['ZipCode'];
-      $_SESSION['city'] = $user['City'];
+      	    $_SESSION['Id'] = $user['Id'];
+        		$_SESSION['email'] = $user['Email'];
+        		$_SESSION['firstName'] = $user['FirtsName'];
+        		$_SESSION['lastName'] = $user['LastName'];
+            $_SESSION['address'] = $user['Address'];
+            $_SESSION['zipCode'] = $user['ZipCode'];
+            $_SESSION['city'] = $user['City'];
 
       var_dump($_SESSION);
 

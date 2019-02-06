@@ -9,15 +9,15 @@ Recap.prototype.buildRecap = function() {
 
   var pHT =0;
 
-  $('meal-list tbody').empty();
+  var priceHT = 0;
+	$('.meal-list tbody').empty();
+     for (var i=0; i < this.items.length; i++) {
+        priceHT += parseFloat(this.items[i].quantity)*parseFloat(this.items[i].salePrice)
 
-  for (var i=0; i< this.basket.items.length; i++){
-    pHT += parseFloat(this.basket.items[i].quantity)*parseFloat(this.basket.items[i].salePrice);
+        var tr = $('<tr>');
+        tr.append('<td><img src="'+this.items[i].img+'" width="25%">'+this.items[i].name+'</td><td class="number">'+this.items[i].quantity+'</td><td class="number">'+this.items[i].salePrice+'</td><tdclass="number">'+parseFloat(this.items[i].quantity)*parseFloat(this.items[i].salePrice)+'</td>')
 
-    var tr = $('<tr>');
-    tr.append('<td> <img src="'+this.basket.items[i].img+'" width=25%">'+this.basket.items[i].name+'</td> <td class="number">'+this.basket.items[i].quantity+'</td><td class="number">'+this.basket.items[i].salePrice+'</td>');
-
-  $('.meal-list tbody').append(tr);
+        $('.meal-list tbody').append(tr);
   }
 /*toFixed 2 deux chiffre apres la virgule*/
 var tva =(pHT*0.2).toFixed(2);
