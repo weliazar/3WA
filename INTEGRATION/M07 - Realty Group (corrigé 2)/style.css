@@ -1,0 +1,129 @@
+/********************************************
+GÉNÉRALITÉS
+********************************************/
+
+* {
+	box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #A49E9E;
+}
+
+/********************************************
+LOGO
+********************************************/
+
+.logo, h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+/********************************************
+MENU
+********************************************/
+
+.menu {
+	border-bottom: 4px solid #2CBCD6;
+}
+
+/* Liens */
+.menu a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+.menu a:hover {
+	color: #195F87;
+}
+
+/* Tous les "ul" */
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+    text-align: center;
+}
+
+/* Les "li" du 1er niveau à l'horizontal */
+.menu > ul > li {
+	display: inline-block;
+}
+
+/* Les liens du 1er niveau */
+.menu > ul > li > a {
+	font-weight: bold;
+	padding: 20px 30px;
+	color: #2CBCD6;
+	display: inline-block;
+}
+
+.menu > ul > li:hover > a {
+	color: white;
+	background-color: #2CBCD6;
+}
+
+/* La partie bleu, le 2eme niveau */
+.menu div {
+	display: none;
+	position: absolute;
+	background: #2CBCD6;
+	left: 0;
+    right: 0;
+	padding-bottom: 50px;
+}
+
+/* Le 2eme niveau s'affiche au hover */
+.menu > ul > li:hover div {
+	display: block;
+}
+
+/* Le 3eme niveau : bloc de gauche et de droite */
+.menu div ul {
+	width: 48%;
+	display: inline-block;
+    vertical-align: top;
+	padding: 1em;
+}
+
+.menu div a {
+	line-height: 1.8;
+}
+
+.menu div h2 {
+	color: #89deed;
+	padding: 50px 0 15px ;
+	margin: 0;
+	font-size: 1.5em;
+}
+
+/* MAIN */
+main {
+    width: 60%;
+    margin: 25px auto 75px;
+    line-height: 2;
+}
+
+main h2 {
+    font-size: 2em;
+    color: #2CBCD6;
+    margin: 50px 0 -15px;
+}
+
+/* LICENCE */
+#licence {
+    background-color: #2CBCD6;
+    color: #89deed;
+    text-align: center;
+    padding: 25px;
+    display: block;
+}
+
+#licence img {
+    width: 50px;
+    margin: 0 auto;
+}
+
+#licence a {
+    color: white;
+}

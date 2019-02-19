@@ -1,0 +1,51 @@
+<h2> Rédiger un nouvel article</h2>
+
+<form class="generic-form" enctype="multipart/form-data" action="<?=$requestUrl?>/ajout" method="post">
+    <fieldset>
+        <legend> Nouvel article</legend>
+        <ul>
+            <li>
+                <label for="category">Catégorie :</label>
+                <select id="category" name="category">
+
+                    <option value="">test1</option>
+
+                </select>
+            </li>
+              <li>
+                <label for="under-category">Sous catégorie :</label>
+                <select id="under-category" name="under-category">
+                   
+                        <option value="">test1</option>
+                   
+                </select>
+            </li>
+            
+            <li>
+                <label for="title">Titre :</label>
+                <input type="text" id="title" name="title">
+            </li>
+            
+             <li>
+                <label class="textarea" for="description">Description :</label>
+                <textarea id="description" name="description" rows="5"></textarea>
+            </li>
+            
+            
+        
+           
+           <li>
+                <input type="file" name="fichier" size="30">
+     
+
+            </li>
+            
+
+            <li>
+                <button class="button button-primary" type="submit">Enregistrer</button>
+                <a class="button button-cancel" href="index.php">Annuler</a>
+            </li>
+            
+        </ul>
+    </fieldset>
+</form>

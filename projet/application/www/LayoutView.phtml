@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PROJET FINAL </title>
+    <link rel="stylesheet" href="<?= $wwwUrl?>/css/normalize.css">
+    <link rel="stylesheet" href="<?= $wwwUrl?>/css/principal.css">
+    <link rel="stylesheet" href="<?= $wwwUrl?>/css/marketing.css">
+    <link rel="stylesheet" href="<?= $wwwUrl?>/css/navigation.css">
+
+
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+
+<body>
+    <!--
+    <header>
+        <div class="site-header sticky">
+
+
+            <div class="site-header-nav site-header-nav-left">
+
+
+
+                <div class="nav-item nav-menu-browse js-nav-menu-browse">
+
+
+                    <a class="#">
+
+                        <span>Cours</span>
+
+                    </a>
+
+                    <div class="popover shadow bottom">
+
+                        <div class="inner-popover">
+                            <div class="arrow left"></div>
+
+
+                                <div class="nav-menu-list">
+                                        <img src="<?= $wwwUrl ?>/images/logo.png" width="100">
+
+                                    <div class="nav-menu-categories">
+
+
+                                        <ul class="nav-menu-category-list">
+
+                                            <li class="nav-menu-category"><a class="primary" href="">Business</a></li>
+                                            <li class="nav-menu-subcategory"><a href="">Marketing</a></li>
+                                            <li class="nav-menu-subcategory"><a href="">Finance</a></li>
+                                            <li class="nav-menu-subcategory"><a href="">Vente</a></li>
+                                            <li class="nav-menu-subcategory"><a href="">Comptabilité</a></li>
+
+                                        </ul>
+
+                                        <ul class="nav-menu-category-list">
+
+                                            <li class="nav-menu-category"><a class="primary" href="">Technologie</a></li>
+                                            <li class="nav-menu-subcategory"><a href="">Bureautique</a></li>
+                                            <li class="nav-menu-subcategory"><a href="">Developpement web</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </header>
+
+
+-->
+
+
+    <!--
+
+    <header>
+
+        <div class="navigation">
+
+ <div> <img src="<?= $wwwUrl ?>/images/logo.png" width="200"> </div>
+
+            <div class="navigation-droite">
+
+
+                <ul class="nav-menu-category-list">
+
+                    <li class="nav-menu-category"><a class="primary" href="">Business</a></li>
+
+                    <li class="nav-menu-subcategory"><a href="">Marketing</a></li>
+                    <li class="nav-menu-subcategory"><a href="">Finance</a></li>
+                    <li class="nav-menu-subcategory"><a href="">Vente</a></li>
+                    <li class="nav-menu-subcategory"><a href="">Comptabilité</a></li>
+
+                </ul>
+
+                <ul class="nav-menu-category-list">
+
+                    <li class="nav-menu-category"><a class="primary" href="">Technologie</a></li>
+                    <li class="nav-menu-subcategory"><a href="">Bureautique</a></li>
+                    <li class="nav-menu-subcategory"><a href="">Developpement web</a></li>
+
+                </ul>
+
+            </div>
+
+         <div class="navigation-gauche">
+
+            <div class="utlisateur">
+
+             <button class="connexion">Connexion</button>
+            <button class="inscription"> S'inscrire</button>
+            </div>
+
+        </div>
+
+
+        </div>
+
+
+
+
+    </header>
+
+-->
+    <header>
+
+
+        <nav class="navigation">
+            <a href="<?=$requestUrl?>">
+                <div class="logo"> <img src="<?= $wwwUrl ?>/images/logo.png" width="150"> </div>
+            </a>
+
+            <ul>
+                <li>
+                    <a href="#">Nos Cours</a>
+                    <div class="menu">
+                        <div class="sous-menu">
+                            <h2>Business</h2>
+                            <ul>
+                                <li class="nav-menu-subcategory"><a href="">Marketing</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Finance</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Vente</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Comptabilité</a></li>
+
+                            </ul>
+                            <h2>Technologies</h2>
+                            <ul>
+                                <li class="nav-menu-subcategory"><a href="">Bureautique</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Developpement web</a></li>
+                            </ul>
+                        </div>
+                        <div class="sous-menu">
+                            <h2>Technologies</h2>
+                            <ul>
+                                <li class="nav-menu-subcategory"><a href="">Bureautique</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Developpement web</a></li>
+                            </ul>
+                            <h2>Business</h2>
+                            <ul>
+                                <li class="nav-menu-subcategory"><a href="">Marketing</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Finance</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Vente</a></li>
+                                <li class="nav-menu-subcategory"><a href="">Comptabilité</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Notre histoire</a>
+                    <div class="menu">
+                        <div class="sous-menu">
+                            <h2>A propos </h2>
+                            <ul>
+                                <li><a href="#">Notre Equipe</a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#">Nous rejoindre</a></li>
+                                <li><a href="#">Nous contacter</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Ajouter du contenu </a>
+                    <div class="menu">
+
+                        <div class="sous-menu">
+                            <h2>Procedure </h2>
+                            <ul>
+                                <li class="nav-menu-subcategory"><a href="">Les etapes</a></li>
+                                <li class="nav-menu-subcategory"><a href="">La verification</a></li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+
+            <div class="navigation-gauche">
+
+                <div class="utlisateur">
+                    <?php if (array_key_exists( 'email', $_SESSION ) == false) {?>
+                    <a href="<?=$requestUrl?>/user/login"><button class="connexion">Connexion</button></a>
+
+                    <a href="<?=$requestUrl?>/user/register"> <button class="inscription"> S'inscrire</button> </a>
+                    <?php } else {?>
+                    <p class="welcome">Bonjour <strong>
+                            <?= $_SESSION['prenom']; ?> </strong> !</p>
+                    <a href="<?=$requestUrl?>/user/logout"><button class="deco">Deconnexion</button></a>
+                    <?php } ?>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+        <?php include $this->viewData['template'] ?>
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+    <!-- Code principal JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+
+</html>

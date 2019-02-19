@@ -1,0 +1,117 @@
+.contenu-cours {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.cours {
+    width: 265px;
+    height: 300px;
+    border: 1px red solid;
+}
+
+
+.image-cours {
+    width: 265px;
+    height: 150px;
+
+
+}
+
+
+.details-cours {
+    width: 250px;
+    height: 80px;
+}
+
+
+
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*
+.nav-menu-categories {
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 16px;
+}
+
+
+.nav-menu-category-list{
+     display: inline-block;
+}
+
+*/
+
+
+/ nav {
+    border-bottom: 4px solid #2CBCD6;
+}
+
+/* Tous les "ul" */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Les "li" du 1er niveau */
+nav > ul > li {
+    display: inline-block;
+}
+
+/* Les liens du 1er niveau */
+nav > ul > li > a {
+    font-weight: bold;
+    padding: 20px 30px;
+    color: #2CBCD6;
+    display: inline-block;
+}
+
+nav > ul > li > a:hover {
+    color: white;
+    background-color: #2CBCD6;
+}
+
+/* La partie bleu, le 2eme niveau */
+nav .menu {
+    display: none;
+    position: absolute;
+    background: #2CBCD6;
+    left: 0;
+    right: 0;
+}
+
+/* Le 2eme niveau s'affiche au hover */
+nav ul li:hover .menu {
+    display: block;
+    padding-bottom: 50px;
+}
+
+/* Le 3eme niveau : bloc de gauche et de droite */
+.sous-menu {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 2.5%;
+}
+
+.menu a {
+    line-height: 1.8;
+}
+
+.menu h2 {
+    color: #89deed;
+    padding: 50px 0 15px;
+    margin: 0;
+    font-size: 1.5em;
+}

@@ -1,0 +1,34 @@
+.contenaireProduits {
+    width: 70%;
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.produits {
+    width: 30%;
+
+    
+
+    margin: 1em;
+}
+
+
+.descriptionProduits {
+    width: 300px;
+
+   
+
+}
+
+
+.prixProduits {
+
+    width: 300px;
+  
+
+}
+

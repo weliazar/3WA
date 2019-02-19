@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projet</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/coqueView.css">
+    
+      <link rel="stylesheet" href="<?= $wwwUrl ?>/css/detailsView.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+
+<body>
+
+    <!-- En-tête commune -->
+    <header>
+        <h1>
+            Titre
+        </h1>
+        <div class="containerHeader">
+
+            <div class="panier">
+
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="prixPanier">
+                    <p>Mon panier</p>
+                    <p class="prixPanier">0.00€</p>
+                    <a href="#">
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="indentification">
+
+                <?php if (array_key_exists( 'email', $_SESSION ) == false) {?>
+                <a href="<?=$requestUrl?>/user/register">
+                    <button>S'inscrire</button></a>
+                <a href="<?=$requestUrl?>/user/login"> <button> Se connecter</button></a>
+                <?php } else {?>
+                            <p class="welcome">Bonjour <strong>  <?= $_SESSION['firstName']; ?> </strong> !</p>
+
+                <a href="<?=$requestUrl?>/user/logout"> <button> Se deconnecter</button></a>
+                <a href="#"><p>Mon Compte </p></a>
+                <?php } ?>
+            </div>
+
+            <nav class="navigationHaut">
+                <a href="<?=$requestUrl?>/coque">COQUES</a>
+                <a href="#">ECOUTEURS</a>
+                <a href="#">ACCESSOIRES</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Interface utilisateur -->
+    <nav class="user-interface">
+        <ul class="link-list">
+            <!-- Code HTML/PHP à écrire -->
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Affichage du template lié à la vue -->
+        <?php include $this->viewData['template'] ?>
+    </main>
+
+    <!-- Pied de page commun -->
+    <footer>
+        <nav class="navigationBas">
+            <a href="#">
+                <i class="fas fa-lock"></i>PAIEMENT SÉCURISÉ </a>
+
+            <a href="#">
+                <i class="fas fa-truck"></i>MA LIVRAISON OFFERTE</a>
+
+            <a href="#"><i class="far fa-money-bill-alt"></i>CARTE DE FIDELITÉ</a>
+
+            <a href="#">
+                <i class="fas fa-phone"></i>SERVICE CLIENT</a>
+
+            <a href="#">
+                <i class="fas fa-check-circle"></i>GARANTIE QUALITÉ</a>
+
+        </nav>
+
+
+
+        <nav class="presentation">
+
+            <ul>
+                <h3> NOS PRODUITS</h3>
+
+                <li><a href="#"> Lorem</a></li>
+                <li><a href="#"> Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#"> Recrutement</a></li>
+                <li><a href="#"> Contactez-nous !</a></li>
+
+            </ul>
+
+            <ul>
+                <h3> COMMANDEZ EN LIGNE </h3>
+                <li><a href="#"> Premiere Visite</a></li>
+                <li><a href="#"> Aides</a></li>
+                <li><a href="#"> Services client</a>
+                </li>
+                <li><a href="#"> Lorem</a></li>
+                <li><a href="#"> Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+
+            </ul>
+
+
+            <ul>
+                <h3> SUIVEZ-NOUS ! </h3>
+                <li><a href="#"> Notre histoire</a></li>
+                <li><a href="#"> Nos boutiques</a></li>
+                <li><a href="#"> Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+
+            </ul>
+
+        </nav>
+
+        <small>Réalisé par Wilkenson Eliazar</small>
+    </footer>
+
+    <!-- Code principal JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+
+</html>
